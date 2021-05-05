@@ -98,7 +98,6 @@ export default {
         // const resizeResults = faceAPI.resizeResults(result, dims)
         board.mood = prediction_string(result[0])
         chosenemoji.emoji = picker(board.mood)
-        console.log("chosenemoji.emoji",chosenemoji.emoji)
         // faceAPI.draw.drawDetections(canvasEl.value, resizeResults)
         // faceAPI.draw.drawFaceExpressions(canvasEl.value, resizeResults)
       }
