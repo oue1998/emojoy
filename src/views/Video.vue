@@ -168,7 +168,6 @@ const picker = (value) => {
        */
       const initModel = async () => {
         await faceAPI.nets.ssdMobilenetv1.loadFromUri(initParams.modelUri)
-        await faceAPI.nets.ageGenderNet.loadFromUri(initParams.modelUri)
         await faceAPI.nets.faceExpressionNet.loadFromUri(initParams.modelUri)
       }
 
@@ -212,12 +211,13 @@ video{
   width: 100%;
 }
 #webcam {
-  display: none;
-    /* position: absolute;
+  /* display: none; */
+    position: absolute;
     object-fit: cover;
-    top: 20vh;
-    width: 30vh;
-    height: 30vh; */
+    top: 10vh;
+    left: 0vh;
+    width: 20vh;
+    height: 20vh;
   }
 .animate{
 background-color: #ffcc01;
