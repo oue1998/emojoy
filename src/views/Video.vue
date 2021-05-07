@@ -37,7 +37,7 @@ export default {
   },
   setup () {
     const initParams = reactive({
-      modelUri: '/models',
+      modelUri: '/emojoy/models',
       option: new faceAPI.SsdMobilenetv1Options({ minConfidence: 0.5 })
     })
     const constraints = reactive({
