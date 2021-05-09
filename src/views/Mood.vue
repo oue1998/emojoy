@@ -1,43 +1,50 @@
 <template>
   <div id="Mood">
+          <div class="title" v-show="!start && !content">
+        <h1>ตอนนี้คุณรู้สึกอย่างไร</h1>
+        <h3>แสดงความรู้สึกของคุณออกมา แล้วกดที่กล้อง</h3>
+        <h3>เพื่อให้เราตรวจจับอารมณ์ และแนะนำสิ่งที่น่าสนใจให้คุณ</h3>
+        <button @click="Startemoji">START</button>
+      </div>
             <video
-    
+            v-show="!content"
     id="webcam"
       ref="videoEl"
       autoplay="true"
       playsinline
       @loadedmetadata="runModel"
     />
-        <!-- <li class="board">
+        <li class="board" v-show="!content">
       <ul
         v-for="(item,key) in board"
         :key="key"
       >
         {{ key }} ： {{ item }}
       </ul>
-    </li> -->
+    </li>
       <canvas ref="canvasEl" :width="450" :height="337.5"/>
-      <div class="title" v-show="!start && !content">
-        <h1>ตอนนี้คุณรู้สึกอย่างไร</h1>
-        <h3>แสดงความรู้สึกของคุณออกมา แล้วกดที่กล้อง</h3>
-        <h3>เพื่อให้เราตรวจจับอารมณ์ และแนะนำสิ่งที่น่าสนใจให้คุณ</h3>
-        <button @click="Startemoji">START</button>
-      </div>
     <div class="animate" v-if="start && !content">
-      <div class="camera-shoot">
-        <button type="button" class="button" @click="takePhoto">
+      <div class="menu">
+        <router-link to="/Video">
+         <i class="material-icons nav__icon">arrow_back</i>
+        </router-link>
+        <router-link to="/">
+         <i class="material-icons nav__icon">home</i>
+        </router-link>
+      </div>
+              <button type="button" class="button" @click="takePhoto">
           <img
             src="https://img.icons8.com/material-outlined/50/000000/camera--v2.png"
           />
         </button>
-      </div>
       <video src="../assets/neutral.mp4" autoplay loop v-if="board.mood == 'neutral' || board.mood == ''"></video>
       <video src="../assets/happy1.mp4" autoplay loop v-if="board.mood == 'happy' || board.mood == 'disgusted'"></video>
       <video src="../assets/wow1.mp4" autoplay loop v-if="board.mood == 'surprised' || board.mood == 'fearful'"></video>
       <video src="../assets/angry.mp4" autoplay loop v-if="board.mood == 'angry' || board.mood == 'sad'"></video>
     </div>
     <div class="content" v-show="content">
-      <button @click="Startemoji">X</button>
+      <button @click="Startemoji"><i class="material-icons nav__icon">clear</i></button>
+      <Neutralcontent v-if="board.mood == 'neutral' || board.mood == ''"/>
       <Happycontent v-if="board.mood == 'happy' || board.mood == 'disgusted'"/>
       <Sadcontent v-if="board.mood == 'angry' || board.mood == 'sad'"/>
       <Wowcontent v-if="board.mood == 'surprised' || board.mood == 'fearful'"/>
@@ -51,12 +58,14 @@ import { onMounted, reactive, ref } from 'vue'
 import Happycontent from "../components/Happycontent.vue"
 import Sadcontent from "../components/Sadcontent.vue"
 import Wowcontent from "../components/Wowcontent.vue"
+import Neutralcontent from "../components/Neutralcontent.vue"
 export default {
   name: 'Mood',
   components: {
     Happycontent,
     Sadcontent,
-    Wowcontent
+    Wowcontent,
+    Neutralcontent
   },
   data() {
     return {
@@ -66,7 +75,7 @@ export default {
   },
   setup () {
     const initParams = reactive({
-      modelUri: '/emojoy/models',
+      modelUri: './models',
       option: new faceAPI.SsdMobilenetv1Options({ minConfidence: 0.5 })
     })
     const constraints = reactive({
@@ -144,7 +153,6 @@ export default {
        */
       const initModel = async () => {
         await faceAPI.nets.ssdMobilenetv1.loadFromUri(initParams.modelUri)
-        await faceAPI.nets.ageGenderNet.loadFromUri(initParams.modelUri)
         await faceAPI.nets.faceExpressionNet.loadFromUri(initParams.modelUri)
       }
 
@@ -237,40 +245,54 @@ canvas{
 }
 
 #webcam {
-  display: none;
-    /* position: absolute;
+  /* display: none; */
+    position: absolute;
     object-fit: cover;
-    top: 20vh;
-    width: 30vh;
-    height: 30vh; */
+    top: 10vh;
+    left: 1%;
+    width: 20vh;
+    height: 20vh;
   }
 .board{
     font-size: 20px;
     list-style: none;
-    z-index: 20;
+    z-index: 1;
     text-align: left;
     height: 50px;
     position: absolute;
     top: 20px;
+    left: 1%;
   }
 
   .button{
   z-index: 2;
   position: absolute;
-  top: 10px;
+  top: 10vh;
   right: 10px;
+}
+.menu{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 15vh;
+  position: absolute;
+  top: 1vh;
+  right: 1%;
+  z-index: 2;
+}
+.nav__icon{
+  color: #fff;
+  font-size: 50px;
 }
 
 .content button{
   z-index: 2;
   position: absolute;
-  top: 50px;
-  right: 80px;
-  border: 1px white solid;
+  top: 10vh;
+  right: 5%;
+  border: none;
   border-radius: 25px;
-  background-color: #fff;
-  padding: 20px;
+  background: none;
   font-size: 20px;
-  font-weight: 500;
 }
 </style>

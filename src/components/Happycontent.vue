@@ -1,5 +1,6 @@
 <template>
   <div class="Happycontent">
+    <h1>กำลังมีความสุขหรอ มาทำอะไรที่ยิ่งมีความสุขกันดีกว่า</h1>
     <div class="group">
       <div class="con">
         <a href="https://riccoprint.com/10-best-psychology-books-in-2021/">
@@ -74,9 +75,16 @@ export default {
 <style scoped>
 .Happycontent {
   height: 100vh;
-  background-color: #ffcc01;
+  background: url('../assets/emojoy_web.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   display: flex;
   justify-content: center;
+}
+.Happycontent h1{
+  position: absolute;
+  top: 10vh;
 }
 .group {
   display: flex;

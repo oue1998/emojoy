@@ -7,6 +7,12 @@
       playsinline
       @loadedmetadata="runModel"
     />
+    <canvas ref="canvasEl" />
+     <div class="menu">
+        <router-link to="/">
+         <i class="material-icons nav__icon">home</i>
+        </router-link>
+      </div>
     <div class="button">
       <router-link to="/Mood">Mood</router-link>
     </div>
@@ -21,7 +27,6 @@
     <div class="animate">
       <video :src="chosenemoji.emoji" autoplay loop></video>
     </div>
-    <!-- <canvas ref="canvasEl" /> -->
   </div>
 </template>
 
@@ -37,7 +42,7 @@ export default {
   },
   setup () {
     const initParams = reactive({
-      modelUri: '/emojoy/models',
+      modelUri: './models',
       option: new faceAPI.SsdMobilenetv1Options({ minConfidence: 0.5 })
     })
     const constraints = reactive({
@@ -145,15 +150,15 @@ const picker = (value) => {
       if (obj[p] > maxVal) {
         maxVal = obj[p];
         top_prediction = p;
-        // if (p===obj.happy || obj.disgusted){
-        
-        // }
-        // if (p===obj.surprised || obj.fearful){
-        
-        // }
-        // if (p===obj.angry || obj.sad){
-        
-        // }
+        if (p === 'happy' || p === 'disgusted'){
+        top_prediction="happy"
+        }
+        if (p === 'surprised' || p === 'fearful'){
+        top_prediction="surprised"
+        }
+        if (p === 'angry' || p === 'sad'){
+        top_prediction="angry"
+        }
       }
   }
  
@@ -215,7 +220,7 @@ video{
     position: absolute;
     object-fit: cover;
     top: 10vh;
-    left: 0vh;
+    left: 1%;
     width: 20vh;
     height: 20vh;
   }
@@ -230,6 +235,7 @@ background-color: #ffcc01;
     height: 50px;
     position: absolute;
     top: 20px;
+    left: 1%;
   }
 
 .button{
@@ -248,4 +254,23 @@ background-color: #ffcc01;
   font-size: 20px;
   font-weight: 500;
 }
+
+.menu{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 15vh;
+  position: absolute;
+  top: 1vh;
+  right: 3%;
+  z-index: 2;
+}
+.menu .nav__icon{
+  color: #fff;
+  font-size: 50px;
+}
+
+canvas {
+        position: absolute;
+      }
 </style>

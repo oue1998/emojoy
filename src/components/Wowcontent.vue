@@ -1,5 +1,6 @@
 <template>
   <div class="Wowcontent">
+    <h1>มาทำอะไรที่ยิ่งตื่นเต้นสุด ๆ กันไปเลยดีกว่า</h1>
     <div class="group">
       <div class="con">
         <a
@@ -74,9 +75,16 @@ export default {
 <style scoped>
 .Wowcontent {
   height: 100vh;
-  background-color: #ffcc01;
+  background: url('../assets/emojoy_web.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   display: flex;
   justify-content: center;
+}
+.Wowcontent h1{
+  position: absolute;
+  top: 10vh;
 }
 .group {
   display: flex;

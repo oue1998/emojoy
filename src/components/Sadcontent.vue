@@ -1,5 +1,6 @@
 <template>
   <div class="Sadcontent">
+    <h1>โกรธหรอ มาหากิจกรรมทำเพื่อผ่อนคลายอารมณ์กันดีกว่านะ</h1>
     <div class="group">
       <div class="con">
         <a href="https://www.thainarak.net/movies-list-best-funny-comedy.html">
@@ -65,9 +66,16 @@ export default {
 <style scoped>
 .Sadcontent {
   height: 100vh;
-  background-color: #ffcc01;
+  background: url('../assets/emojoy_web.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   display: flex;
   justify-content: center;
+}
+.Sadcontent h1{
+  position: absolute;
+  top: 10vh;
 }
 .group {
   display: flex;
