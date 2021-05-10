@@ -1,8 +1,4 @@
 <template>
-  <!-- <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/Video">Video</router-link>
-  </div> -->
   <router-view/>
 </template>
 
@@ -11,7 +7,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Prompt", sans-serif;
+  font-family: 'Kanit', sans-serif;
 }
 
 #nav {
