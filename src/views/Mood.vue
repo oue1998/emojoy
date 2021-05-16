@@ -2,8 +2,9 @@
   <div id="Mood">
           <div class="title" v-show="!start && !content">
         <h1>ตอนนี้คุณรู้สึกอย่างไร</h1>
-        <h3>แสดงความรู้สึกของคุณออกมา แล้วกดที่กล้อง</h3>
-        <h3>เพื่อให้เราตรวจจับอารมณ์ และแนะนำสิ่งที่น่าสนใจให้คุณ</h3>
+        <h3>แสดงความรู้สึกของคุณออกมา แล้วกดที่รูปกล้อง (ในหน้าถัดไป)</h3>
+        <h3>เพื่อให้กล้องตรวจจับอารมณ์ของคุณ และนำเสนอสิ่งที่น่าสนใจ</h3>
+        <h3>ถ้าพร้อมแล้วกดปุ่ม START เพื่อเข้าสู่หน้าอีโมจิกันได้เลย</h3>
         <button @click="Startemoji">START</button>
       </div>
             <video
@@ -22,7 +23,8 @@
         {{ key }} ： {{ item }}
       </ul>
     </li>
-      <canvas ref="canvasEl" :width="450" :height="337.5"/>
+      <!-- <canvas ref="canvasEl" :width="450" :height="337.5"/> -->
+      <canvas v-show="isPhotoTaken" ref="canvasEl" :width="450" :height="337.5"/>
     <div class="animate" v-if="start && !content">
       <div class="menu">
         <router-link to="/Video">
@@ -37,6 +39,7 @@
             src="https://img.icons8.com/material-outlined/50/000000/camera--v2.png"
           />
         </button>
+      <h2>กดที่รูปกล้องเพื่อให้เราตรวจจับอารมณ์จากสีหน้าของคุณ</h2>
       <video src="../assets/neutral.mp4" autoplay loop v-if="board.mood == 'neutral' || board.mood == ''"></video>
       <video src="../assets/happy1.mp4" autoplay loop v-if="board.mood == 'happy' || board.mood == 'disgusted'"></video>
       <video src="../assets/wow1.mp4" autoplay loop v-if="board.mood == 'surprised' || board.mood == 'fearful'"></video>
@@ -71,6 +74,7 @@ export default {
     return {
       start: false,
       content: false,
+      isPhotoTaken: false
     };
   },
   setup () {
@@ -103,10 +107,7 @@ export default {
     const board = reactive({
       mood: ''
     })
-    // var photo = reactive({
-    //   isPhotoTaken: false,
-    //   isShotPhoto: false
-    // })
+
     /**
      * caculate fps for detection
      * @function
@@ -138,6 +139,15 @@ export default {
       if (obj[p] > maxVal) {
         maxVal = obj[p];
         top_prediction = p;
+        if (p === 'happy' || p === 'disgusted'){
+        top_prediction="happy"
+        }
+        if (p === 'surprised' || p === 'fearful'){
+        top_prediction="surprised"
+        }
+        if (p === 'angry' || p === 'sad'){
+        top_prediction="angry"
+        }
       }
     
   }
@@ -183,8 +193,9 @@ export default {
   },
   methods:{
     takePhoto() {
+      this.isPhotoTaken = !this.isPhotoTaken;
       const context = this.$refs.canvasEl.getContext('2d');
-      context.drawImage(this.$refs.videoEl, 0, 0, 450, 337.5);
+      context.drawImage(this.$refs.videoEl, 0, 0, 150, 150);
       setTimeout(() => this.Showcontent(),4000)
     },
 
@@ -198,6 +209,9 @@ export default {
     Showcontent() {
       this.content = !this.content
       this.start = !this.start
+      if(this.isPhotoTaken){
+        this.isPhotoTaken = !this.isPhotoTaken;
+      }
     }
 
   }
@@ -213,7 +227,10 @@ video{
   width: 100%;
 }
 canvas{
-  display: none;
+  /* display: none; */
+  position: absolute;
+  top: 31vh;
+  left: 1%;
 }
 
 .animate{
@@ -294,5 +311,12 @@ canvas{
   border-radius: 25px;
   background: none;
   font-size: 20px;
+}
+
+.animate h2{
+  position: absolute;
+  right: 32%;
+  left: 32%;
+  top: 2vh;
 }
 </style>
