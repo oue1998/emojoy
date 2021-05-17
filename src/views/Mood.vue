@@ -234,11 +234,11 @@ canvas{
 }
 
 .animate{
-  background-color: #ffcc01;
+  background-color: #fdc002;
   height: 100vh;
 }
 .title{
-  background-color: #ffcc01;
+  background-color: #fdc002;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -267,8 +267,8 @@ canvas{
     object-fit: cover;
     top: 10vh;
     left: 1%;
-    width: 20vh;
-    height: 20vh;
+    width: 150px;
+    height: 150px;
   }
 .board{
     font-size: 20px;
@@ -291,7 +291,7 @@ canvas{
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 15vh;
+  width: 120px;
   position: absolute;
   top: 1vh;
   right: 1%;
@@ -305,7 +305,7 @@ canvas{
 .content button{
   z-index: 2;
   position: absolute;
-  top: 10vh;
+  top: 5%;
   right: 5%;
   border: none;
   border-radius: 25px;
@@ -314,9 +314,12 @@ canvas{
 }
 
 .animate h2{
-  position: absolute;
-  right: 32%;
-  left: 32%;
-  top: 2vh;
+  position: absolute; 
+  left: 0; 
+  right: 0; 
+  margin-left: auto; 
+  margin-right: auto; 
+  width: 600px;
+  top: 2%;
 }
 </style>

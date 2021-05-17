@@ -75,7 +75,7 @@ export default {
 }
 .Sadcontent h1{
   position: absolute;
-  top: 10vh;
+  top: 2%;
 }
 .group {
   display: flex;

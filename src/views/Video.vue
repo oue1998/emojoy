@@ -209,7 +209,7 @@ const picker = (value) => {
 
 <style scoped>
 #Video{
-  background-color: #ffcc01;
+  background-color: #fdc002;
   position: relative;
 }
 video{
@@ -221,11 +221,11 @@ video{
     object-fit: cover;
     top: 10vh;
     left: 1%;
-    width: 20vh;
-    height: 20vh;
+    width: 150px;
+    height: 150px;
   }
 .animate{
-background-color: #ffcc01;
+background-color: #fdc002;
 }
 .board{
     font-size: 20px;
@@ -259,7 +259,7 @@ background-color: #ffcc01;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 15vh;
+  width: 100px;
   position: absolute;
   top: 1vh;
   right: 3%;
