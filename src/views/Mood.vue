@@ -281,7 +281,7 @@ canvas{
     left: 1%;
   }
 
-  .button{
+.button{
   z-index: 2;
   position: absolute;
   top: 10vh;
@@ -310,9 +310,11 @@ canvas{
   border: none;
   border-radius: 25px;
   background: none;
-  font-size: 20px;
 }
-
+.content button .nav__icon{
+  color: #fff;
+  font-size: 100px;
+}
 .animate h2{
   position: absolute; 
   left: 0; 
@@ -321,5 +323,75 @@ canvas{
   margin-right: auto; 
   width: 600px;
   top: 2%;
+}
+@media (max-width:1280px) {
+.content button{
+  z-index: 2;
+  position: absolute;
+  top: 10%;
+  right: 5%;
+  border: none;
+  border-radius: 25px;
+  background: none;
+}
+.content button .nav__icon{
+  color: #fff;
+  font-size: 100px;
+}
+}
+@media (max-width:1024px) {
+#webcam {
+    position: absolute;
+    object-fit: cover;
+    top: 10vh;
+    left: 30px;
+    width: 150px;
+    height: 150px;
+  }
+canvas{
+  position: absolute;
+  top: 22vh;
+  left: 30px;
+}
+.board{
+    font-size: 20px;
+    list-style: none;
+    z-index: 1;
+    text-align: left;
+    height: 50px;
+    position: absolute;
+    top: 5vh;
+    left: 30px;
+  }
+.button{
+  z-index: 2;
+  position: absolute;
+  top: 7vh;
+  right: 20px;
+}
+.menu{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 120px;
+  position: absolute;
+  top: 1vh;
+  right: 20px;
+  z-index: 2;
+}
+.nav__icon{
+  color: #fff;
+  font-size: 50px;
+}
+.animate h2{
+  position: absolute; 
+  left: 0; 
+  right: 0; 
+  margin-left: auto; 
+  margin-right: auto; 
+  width: 500px;
+  top: 2%;
+  font-size: 20px;
+}
 }
 </style>

@@ -211,6 +211,7 @@ const picker = (value) => {
 #Video{
   background-color: #fdc002;
   position: relative;
+  height: 100vh;
 }
 video{
   width: 100%;
@@ -271,6 +272,47 @@ background-color: #fdc002;
 }
 
 canvas {
-        position: absolute;
-      }
+  position: absolute;
+}
+@media (max-width:1024px) {
+#Video{
+  background-color: #fdc002;
+  position: relative;
+  height: 100vh;
+}
+#webcam {
+    position: absolute;
+    object-fit: cover;
+    top: 10vh;
+    left: 30px;
+    width: 150px;
+    height: 150px;
+  }
+.board{
+    font-size: 20px;
+    list-style: none;
+    z-index: 1;
+    text-align: left;
+    height: 50px;
+    position: absolute;
+    top: 5vh;
+    left: 30px;
+  }
+
+.menu{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 120px;
+  position: absolute;
+  top: 1vh;
+  right: 20px;
+  z-index: 2;
+}
+.nav__icon{
+  color: #fff;
+  font-size: 50px;
+}
+
+}
 </style>

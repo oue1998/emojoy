@@ -78,7 +78,7 @@ export default {
   background: url('../assets/emojoy_web.png');
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 100% 100%;
   display: flex;
   justify-content: center;
 }
@@ -110,5 +110,19 @@ export default {
 }
 .con p {
   margin-top: 20px;
+}
+
+@media (max-width:1280px) {
+.group {
+  width: 100%;
+}
+.con {
+  width: 280px;
+  margin: 20px;
+}
+.con img {
+  width: 250px;
+  margin-top: 20px;
+}
 }
 </style>

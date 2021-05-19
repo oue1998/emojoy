@@ -31,8 +31,8 @@ export default {
   background: url('../assets/home.png');
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
-  /* background-color: #ffcc01; */
+  background-size: 100% auto;
+  background-color: #fffeb3;
   position: relative;
   height: 100vh;
   display: flex;
