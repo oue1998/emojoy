@@ -393,5 +393,14 @@ canvas{
   top: 2%;
   font-size: 20px;
 }
+.content button{
+  z-index: 2;
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  border: none;
+  border-radius: 25px;
+  background: none;
+}
 }
 </style>

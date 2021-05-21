@@ -79,7 +79,7 @@ export default {
 }
 .group {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   width: 90%;
 }
@@ -103,16 +103,34 @@ export default {
   margin-top: 20px;
 }
 @media (max-width:1280px) {
+.Sadcontent {
+  height: fit-content;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: 100% 50%;
+}
 .group {
-  width: 100%;
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  height: fit-content;
+  margin-top: 10vh;
+  margin-bottom: 50px;
 }
 .con {
-  width: 280px;
+  width: 100%;
+  height: 550px;
+  justify-content: center;
+  padding: 20px;
   margin: 20px;
 }
 .con img {
   width: 250px;
   margin-top: 20px;
+}
+.con p {
+  font-size: 25px;
+  width: 80%;
 }
 }
 </style>
