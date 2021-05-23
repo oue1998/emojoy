@@ -259,7 +259,7 @@ background-color: #fdc002;
 .menu{
   position: absolute;
   top: 1vh;
-  right: 10vw;
+  right: 100px;
   z-index: 2;
 }
 .menu .nav__icon{
@@ -269,10 +269,5 @@ background-color: #fdc002;
 
 canvas {
   position: absolute;
-}
-@media (min-width:1025px) {
-.menu{
-  right: 6vw;
-}
 }
 </style>

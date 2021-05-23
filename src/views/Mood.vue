@@ -229,7 +229,7 @@ video{
 canvas{
   /* display: none; */
   position: absolute;
-  top: 26vh;
+  top: 30vh;
   left: 1%;
 }
 
@@ -306,7 +306,7 @@ canvas{
   z-index: 2;
   position: absolute;
   top: 3vh;
-  right: 1vw;
+  right: 50px;
   border: none;
   border-radius: 25px;
   background: none;
@@ -325,16 +325,5 @@ canvas{
   width: 700px;
   top: 2vh;
   font-size: 25px;
-}
-@media (min-width:1025px) {
-.content button{
-  z-index: 2;
-  position: absolute;
-  top: 5vh;
-  right: 10vw;
-  border: none;
-  border-radius: 25px;
-  background: none;
-}
 }
 </style>

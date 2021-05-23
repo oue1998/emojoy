@@ -89,7 +89,7 @@ export default {
   justify-content: center;
   align-items: center;
   width: 98%;
-  margin-top: 50px;
+  margin-top: 100px;
 }
 .con {
   width: 300px;
