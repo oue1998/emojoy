@@ -64,7 +64,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.Sadcontent {
+.Sadcontent{
   height: 100vh;
   background: url('../assets/emojoy_web.png');
   background-position: center;
@@ -75,13 +75,16 @@ export default {
 }
 .Sadcontent h1{
   position: absolute;
-  top: 2%;
+  top: 4vh;
+  font-size: 30px;
 }
+
 .group {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 90%;
+  width: 98%;
+  margin-top: 50px;
 }
 .con {
   width: 300px;
@@ -94,43 +97,12 @@ export default {
   flex-direction: column;
   justify-content: center;
   padding: 20px;
+  margin: 10px;
 }
 .con img {
-  width: 250px;
-  margin-top: 20px;
-}
-.con p {
-  margin-top: 20px;
-}
-@media (max-width:1280px) {
-.Sadcontent {
-  height: fit-content;
-  background-position: top;
-  background-repeat: no-repeat;
-  background-size: 100% 50%;
-}
-.group {
-  display: flex;
-  flex-direction: column;
-  width: 50%;
-  height: fit-content;
-  margin-top: 10vh;
-  margin-bottom: 50px;
-}
-.con {
   width: 100%;
-  height: 550px;
-  justify-content: center;
-  padding: 20px;
-  margin: 20px;
-}
-.con img {
-  width: 250px;
-  margin-top: 20px;
 }
 .con p {
-  font-size: 25px;
-  width: 80%;
-}
+  margin-top: 18px;
 }
 </style>

@@ -11,8 +11,7 @@
           />
         </a>
         <p>
-          รวมฮิตเรื่องหลอนจาก Spotify ฟังกลางวันก่อนขนลุกได้น้าา เช็กดีๆ
-          ก่อนฟังนะว่ามีใครอยู่กับเราด้วยรึเปล่า? เดี๋ยวนี้คนหันมาฟัง Podcast
+          รวมฮิตเรื่องหลอนจาก Spotify เดี๋ยวนี้คนหันมาฟัง Podcast
           กันมากขึ้น มีทั้งฝึกภาษาอังกฤษ ข่าว เรื่องน่ารู้ และอื่นๆ อีกเพียบ
           วันนี้แอดจะชวนมาฟังแนวเรื่องหลอนๆ กันบ้าง รับรองว่าทั้งสนุก
           ทั้งน่ากลัว ฟังตอนกลางคืนระวังไม่กล้านอนคนเดียวน้า
@@ -25,12 +24,10 @@
           />
         </a>
         <p>
-          อากาศหนาว ๆ แบบนี้ มาเพิ่มอะดรีนาลีนให้ร่างกายอบอุ่นขึ้นด้วย
-          หนังสยองขวัญ 25 เรื่องกันดีกว่าค่ะ รับรองว่าเป็นหนัง กระตุกจิต!
+          หนังสยองขวัญ 25 เรื่อง รับรองว่าเป็นหนัง กระตุกจิต!
           กระชากใจ! จนทำให้อะดรีนาลีนพุ่งปรี๊ด ๆ อย่างแน่นอน! แถมนักวิจัยจาก
           Westminster วิจัยว่า การดูหนังสยองขวัญ 90 นาที ช่วยเผาผลาญได้ถึง 113
-          แคลอรี อีกด้วย พร้อมแล้วไปดูกันเลยค่ะ ว่าใน 25
-          เรื่องนี้จะมีเรื่องไหนบ้าง!
+          แคลอรี อีกด้วย พร้อมแล้วไปดูกันเลยค่ะ
         </p>
       </div>
       <div class="con">
@@ -58,7 +55,6 @@
           ที่รวบรวมโดยทีมงานมายเบสท์ทั้งนวนิยายไทยและนวนิยายแปลต่างประเทศ
           ไม่ว่าจะเป็นแนวสืบสวนอาชญากรรม แนวสืบสวนสยองขวัญ
           หรือแม้แต่แนวสืบสวนอิงประวัติศาสตร์ มาให้คุณได้อ่านอย่างจุใจ
-          รับรองว่าถ้าอ่านจบแล้ว คุณจะต้องได้สักเรื่องกลับไปอ่านอย่างแน่นอนค่ะ
         </p>
       </div>
     </div>
@@ -73,7 +69,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.Wowcontent {
+.Wowcontent{
   height: 100vh;
   background: url('../assets/emojoy_web.png');
   background-position: center;
@@ -84,13 +80,16 @@ export default {
 }
 .Wowcontent h1{
   position: absolute;
-  top: 2%;
+  top: 4vh;
+  font-size: 28px;
 }
+
 .group {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  width: 90%;
+  width: 98%;
+  margin-top: 50px;
 }
 .con {
   width: 300px;
@@ -103,44 +102,12 @@ export default {
   flex-direction: column;
   justify-content: center;
   padding: 20px;
+  margin: 10px;
 }
 .con img {
-  width: 250px;
-  margin-top: 20px;
-}
-.con p {
-  margin-top: 20px;
-}
-
-@media (max-width:1280px) {
-.Wowcontent {
-  height: fit-content;
-  background-position: top;
-  background-repeat: no-repeat;
-  background-size: 100% 50%;
-}
-.group {
-  display: flex;
-  flex-direction: column;
-  width: 50%;
-  height: fit-content;
-  margin-top: 10vh;
-  margin-bottom: 50px;
-}
-.con {
   width: 100%;
-  height: fit-content;
-  justify-content: center;
-  padding: 20px;
-  margin: 20px;
-}
-.con img {
-  width: 250px;
-  margin-top: 20px;
 }
 .con p {
-  font-size: 25px;
-  width: 80%;
-}
+  margin-top: 18px;
 }
 </style>

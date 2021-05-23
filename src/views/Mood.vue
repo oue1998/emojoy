@@ -195,7 +195,7 @@ export default {
     takePhoto() {
       this.isPhotoTaken = !this.isPhotoTaken;
       const context = this.$refs.canvasEl.getContext('2d');
-      context.drawImage(this.$refs.videoEl, 0, 0, 150, 150);
+      context.drawImage(this.$refs.videoEl, 0, 0, 120, 120);
       setTimeout(() => this.Showcontent(),4000)
     },
 
@@ -229,7 +229,7 @@ video{
 canvas{
   /* display: none; */
   position: absolute;
-  top: 31vh;
+  top: 26vh;
   left: 1%;
 }
 
@@ -265,10 +265,10 @@ canvas{
   /* display: none; */
     position: absolute;
     object-fit: cover;
-    top: 10vh;
+    top: 60px;
     left: 1%;
-    width: 150px;
-    height: 150px;
+    width: 120px;
+    height: 120px;
   }
 .board{
     font-size: 20px;
@@ -285,7 +285,7 @@ canvas{
   z-index: 2;
   position: absolute;
   top: 10vh;
-  right: 10px;
+  right: 20px;
 }
 .menu{
   display: flex;
@@ -305,99 +305,33 @@ canvas{
 .content button{
   z-index: 2;
   position: absolute;
-  top: 5%;
-  right: 5%;
+  top: 3vh;
+  right: 1vw;
   border: none;
   border-radius: 25px;
   background: none;
 }
 .content button .nav__icon{
   color: #fff;
-  font-size: 100px;
+  font-size: 70px;
 }
 .animate h2{
   position: absolute; 
+  text-align: center;
   left: 0; 
   right: 0; 
   margin-left: auto; 
   margin-right: auto; 
-  width: 600px;
-  top: 2%;
+  width: 700px;
+  top: 2vh;
+  font-size: 25px;
 }
-@media (max-width:1280px) {
+@media (min-width:1025px) {
 .content button{
   z-index: 2;
   position: absolute;
-  top: 10%;
-  right: 5%;
-  border: none;
-  border-radius: 25px;
-  background: none;
-}
-.content button .nav__icon{
-  color: #fff;
-  font-size: 100px;
-}
-}
-@media (max-width:1024px) {
-#webcam {
-    position: absolute;
-    object-fit: cover;
-    top: 10vh;
-    left: 30px;
-    width: 150px;
-    height: 150px;
-  }
-canvas{
-  position: absolute;
-  top: 22vh;
-  left: 30px;
-}
-.board{
-    font-size: 20px;
-    list-style: none;
-    z-index: 1;
-    text-align: left;
-    height: 50px;
-    position: absolute;
-    top: 5vh;
-    left: 30px;
-  }
-.button{
-  z-index: 2;
-  position: absolute;
-  top: 7vh;
-  right: 20px;
-}
-.menu{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 120px;
-  position: absolute;
-  top: 1vh;
-  right: 20px;
-  z-index: 2;
-}
-.nav__icon{
-  color: #fff;
-  font-size: 50px;
-}
-.animate h2{
-  position: absolute; 
-  left: 0; 
-  right: 0; 
-  margin-left: auto; 
-  margin-right: auto; 
-  width: 500px;
-  top: 2%;
-  font-size: 20px;
-}
-.content button{
-  z-index: 2;
-  position: absolute;
-  top: 5%;
-  right: 5%;
+  top: 5vh;
+  right: 10vw;
   border: none;
   border-radius: 25px;
   background: none;

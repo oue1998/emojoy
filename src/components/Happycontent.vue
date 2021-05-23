@@ -10,8 +10,7 @@
         </a>
         <p>
           หนังสือจิตวิทยาที่วางขายโดยทั่วไป ก็มีให้ได้เลือกอ่านมากมายหลายเล่ม
-          แต่ละเล่มก็จะมีความแตกต่างกันไป ทั้งในเรื่องของจุดประสงค์
-          รูปแบบของเนื้อหาด้านใน และข้อคิดจากหนังสือ
+          แต่ละเล่มก็จะมีความแตกต่างกันไป
           ดังนั้นในบทความนี้เราจึงจะมาแนะนำหนังสือจิตวิทยา 10 เล่ม
           ที่ควรอ่านในปี 2021 จะมีหนังสือเล่มไปบ้าง ไปดูกันเลยค่ะ !
         </p>
@@ -39,8 +38,7 @@
           กรุงเทพฯ มีที่เที่ยวเยอะมากกก เป็นเมืองที่ไม่เคยหลับใหล
           มีสีสันดึงดูดใจนักท่องเที่ยวทั่วโลก เพราะฉะนั้น
           เราคนไทยก็ต้องเที่ยวไทยกันค่ะ เอาล่ะ ตามมาปักหมุด เที่ยวกรุงเทพ
-          แบบถูกและดี กับ 15 ที่เที่ยวกรุงเทพ เข้าฟรี ฟินไปเลยฟรีๆ
-          เที่ยวแบบประหยัด เดินถ่ายรูปสวยๆ ไม่ต้องเสียตังค์จ้า
+          แบบถูกและดี กับ 15 ที่เที่ยวกรุงเทพ
         </p>
       </div>
       <div class="con">
@@ -54,9 +52,7 @@
         <p>
           สำหรับวันนี้ Ryoii มีร้านคาเฟ่โลเคชั่นคูลๆ มาฝากเพื่อนๆ
           บอกได้เลยว่าแต่ละร้านน่านั่งมากค่ะ
-          และหลังจากที่มีมาตราการคลายล็อคดาวน์ในวันที่ 3 พ.ค. 2563
-          ที่ผ่านมาเชื่อว่าหลายคนคงอยากจะไปนั่งเล่นร้านกาแฟถ่ายรูป ชิวๆ กันแล้ว
-          วันนี้เราจึงจะมาอัปเดตข้อมูลคาเฟ่ที่เปิดให้นั่งแบบ social distance
+          คาเฟ่ที่เปิดให้นั่งแบบ social distance
           และคาเฟ่ที่เปิดให้บริการ delivery มีร้านไหนบ้างก็ตามมาดูเลยค่ะ
           พร้อมแล้วลุยกันเลย
         </p>
@@ -73,7 +69,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.Happycontent {
+.Happycontent{
   height: 100vh;
   background: url('../assets/emojoy_web.png');
   background-position: center;
@@ -84,13 +80,16 @@ export default {
 }
 .Happycontent h1{
   position: absolute;
-  top: 2%;
+  top: 4vh;
+  font-size: 28px;
 }
+
 .group {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  width: 90%;
+  width: 98%;
+  margin-top: 50px;
 }
 .con {
   width: 300px;
@@ -103,44 +102,12 @@ export default {
   flex-direction: column;
   justify-content: center;
   padding: 20px;
+  margin: 10px;
 }
 .con img {
-  width: 250px;
-  margin-top: 20px;
-}
-.con p {
-  margin-top: 20px;
-}
-
-@media (max-width:1280px) {
-.Happycontent {
-  height: fit-content;
-  background-position: top;
-  background-repeat: no-repeat;
-  background-size: 100% 50%;
-}
-.group {
-  display: flex;
-  flex-direction: column;
-  width: 50%;
-  height: fit-content;
-  margin-top: 10vh;
-  margin-bottom: 50px;
-}
-.con {
   width: 100%;
-  height: fit-content;
-  justify-content: center;
-  padding: 20px;
-  margin: 20px;
-}
-.con img {
-  width: 250px;
-  margin-top: 20px;
 }
 .con p {
-  font-size: 25px;
-  width: 80%;
-}
+  margin-top: 18px;
 }
 </style>

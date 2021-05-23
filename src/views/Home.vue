@@ -6,22 +6,7 @@
 
 <script>
 export default {
-  name: 'Home',
-  data() {
-    return {
-      
-    };
-  },
-  setup () {
-    
-
-    return {
-
-    }
-  },
-  methods:{
-
-  }
+  name: 'Home'
 }
 </script>
 

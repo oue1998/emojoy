@@ -220,10 +220,10 @@ video{
   /* display: none; */
     position: absolute;
     object-fit: cover;
-    top: 10vh;
-    left: 1%;
-    width: 150px;
-    height: 150px;
+    top: 60px;
+    left: 1vw;
+    width: 120px;
+    height: 120px;
   }
 .animate{
 background-color: #fdc002;
@@ -236,7 +236,7 @@ background-color: #fdc002;
     height: 50px;
     position: absolute;
     top: 20px;
-    left: 1%;
+    left: 1vw;
   }
 
 .button{
@@ -257,13 +257,9 @@ background-color: #fdc002;
 }
 
 .menu{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100px;
   position: absolute;
   top: 1vh;
-  right: 3%;
+  right: 10vw;
   z-index: 2;
 }
 .menu .nav__icon{
@@ -274,45 +270,9 @@ background-color: #fdc002;
 canvas {
   position: absolute;
 }
-@media (max-width:1024px) {
-#Video{
-  background-color: #fdc002;
-  position: relative;
-  height: 100vh;
-}
-#webcam {
-    position: absolute;
-    object-fit: cover;
-    top: 10vh;
-    left: 30px;
-    width: 150px;
-    height: 150px;
-  }
-.board{
-    font-size: 20px;
-    list-style: none;
-    z-index: 1;
-    text-align: left;
-    height: 50px;
-    position: absolute;
-    top: 5vh;
-    left: 30px;
-  }
-
+@media (min-width:1025px) {
 .menu{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 120px;
-  position: absolute;
-  top: 1vh;
-  right: 20px;
-  z-index: 2;
+  right: 6vw;
 }
-.nav__icon{
-  color: #fff;
-  font-size: 50px;
-}
-
 }
 </style>
