@@ -278,7 +278,7 @@ canvas{
     height: 50px;
     position: absolute;
     top: 20px;
-    left: 1%;
+    left: 1vw;
   }
 
 .button{
